@@ -1,0 +1,106 @@
+<div class="all-section">
+<div class="flex-row section">
+  <div class="flex-col logo">
+    <img
+      src="images/register-image.png"
+      alt="ATHIA Logo"
+      class="idea-logo"
+    />
+  </div>
+
+
+  <div class="register-border"></div>
+
+  <div class="flex-col card-no-action">
+    <img
+      src="images/login-ideabox-image.png"
+      alt="ATHIA Logo"
+      class="idea-box-image"
+    />
+    <div>
+        <label class="sub-headers">Create Your Account</label>
+    </div>
+    <form
+        [formGroup]="registerForm"
+        class="register-form"
+        (ngSubmit)="register()"
+      >
+      <div class="input-container form-field-large">
+        <input
+          class="floating-input"
+          placeholder=" "
+          formControlName="fullname"
+        />
+        <label class="floating-label">Full Name</label>
+      
+      </div>
+
+      <div class="input-container form-field-large">
+        <input
+          class="floating-input"
+          placeholder=" "
+          formControlName="Email"
+        />
+        <label class="floating-label">E-mail</label>
+      
+      </div>
+
+      <div class="input-container form-field-large">
+
+        <input
+            [type]="hidePassword ? 'password' : 'text'"
+            class="floating-input"
+            placeholder=" "
+            formControlName="password"
+        />
+
+        <label class="floating-label">Password</label>
+
+        <mat-icon class="password-icon" (click)="hidePassword = !hidePassword">{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+
+    </div>
+
+    <div class="input-container form-field-large">
+      <input
+        [type]="hideconformpassword ? 'password' : 'text'"
+        class="floating-input"
+        placeholder=" "
+        formControlName="confirmpassword"
+      />
+
+      <label class="floating-label">Confirm Password</label>
+
+      <mat-icon
+        class="password-icon"
+        (click)="hideconformpassword = !hideconformpassword"
+      >
+        {{ hideconformpassword ? 'visibility_off' : 'visibility' }}
+      </mat-icon>
+    </div>
+
+    <div class="error-message" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </div>
+
+<div class="flex-col">
+  <button
+    mat-flat-button
+    class="register-button"
+    type="submit"
+  >
+    <span class="register-text">Register</span>
+  </button>
+</div>
+
+</form>
+
+    <div class="or-divider">
+      <span> or </span>
+    </div>
+
+    <div class="flex-row center-align-content">
+      <span>Already have an account? <a routerLink="/">Login</a></span>
+    </div>
+  </div>
+</div>
+</div>

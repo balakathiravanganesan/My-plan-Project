@@ -1,0 +1,19 @@
+
+<div class="flex-col my-ideas">
+    <div class="card-header">
+    <div class="flex-col my-ideas-header">
+        <label class="card-title">My Ideas</label>
+        <label class="description">Add, manage and keep track of all your ideas.</label>
+    </div>
+
+    <div class="Ai-button" (click)="addideas()"><mat-icon>add</mat-icon><span>Add Ideas</span></div>
+    </div>
+    <div class="ads-search-box"><mat-icon>search</mat-icon><label class="search-box">Search ideas</label></div>
+   <app-idea-child
+    *ngFor="let idea of ideas"
+    [ideaData]="idea"
+    (editIdea)="onEdit($event)"
+    (deleteIdea)="onDelete($event)"
+    (favoriteIdea)="onFavorite($event)">
+   </app-idea-child>
+</div>

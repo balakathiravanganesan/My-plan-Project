@@ -1,0 +1,124 @@
+.app-header {
+  width: 100%;
+//   background-color: #f9f9f9;
+  height: 62px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-content {
+  align-items: center;
+  height: 43px;
+//   border-bottom: 2px solid rgb(12, 29, 53);
+}
+
+.idea-logo{
+    width: 280px;
+    position: relative;
+    right: 31px;
+    height: 115px;
+    margin-top: 50px;
+}
+.header-name{
+    font-size: var(--font-size-xxxxxxlarge);
+    margin-left: -3px;
+}
+.header-username{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 60px;
+    margin-left: -12px;
+}
+.sub-header{
+    font-size: 18px;
+}
+.wavinghand-icon{
+    padding: 8px;
+    margin-top: 52px;
+    color: #FFC107;
+    font-size: 42px;
+    width: 40px;
+    height: 40px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+
+.notification-button {
+  position: relative;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e3e8f0;
+  border-radius: 50%;
+  background: #ffffff;
+
+  cursor: pointer;
+  padding: 0;
+}
+
+.notification-btn mat-icon {
+  font-size: 23px;
+  width: 23px;
+  height: 23px;
+  color: #1f2937;
+}
+
+.notification-dot {
+  position: absolute;
+
+  top: 7px;
+  right: 7px;
+
+  width: 7px;
+  height: 7px;
+
+  background: #ff4d4f;
+  border: 1.5px solid white;
+  border-radius: 50%;
+}
+
+.profile-circle {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #aabaff;
+  color: #172554;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.headers{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}

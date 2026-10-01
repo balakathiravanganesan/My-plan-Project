@@ -1,0 +1,46 @@
+.home-card{
+    padding: 10px;
+    margin-top: 40px;
+}
+.card-title{
+    font-family: var(--font-fmedium) !important;
+    font-size: var(--font-size-xxlarge) !important;
+    color: #000 !important;
+    width: 41%;
+}
+.description{
+    font-family: var(--font-fmedium) !important;
+    font-size: var(--font-size-large) !important;
+    color: #000 !important;
+}
+
+.card-header{
+  margin: 30px 10px 30px 8px;
+  display: flex;
+  align-items: center;
+}
+
+.viewall-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: max-content;
+    padding: 0 !important;
+    height: auto !important;
+    min-height: auto !important;
+    color: #0b57bb !important;
+    font-size: var(--font-size-large) !important;
+    font-family: var(--font-bold) !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.close-button{
+    color: rgb(81, 81, 233);
+    margin-left:50px;
+}
+
+.today-ideas{
+    display: flex;
+    flex-direction: column;
+}

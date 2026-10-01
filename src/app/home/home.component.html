@@ -1,0 +1,53 @@
+<div class="home-card">
+
+  <div class="flex-row wrap-col">
+
+    <app-home-child
+      *ngFor="let card of cards"
+      [cardData]="card">
+    </app-home-child>
+
+  </div>
+
+  <div class="card-header">
+
+    <div class="card-title">
+      {{ showAllPlans ? 'All My Plans' : "Today's Ideas" }}
+    </div>
+   
+
+    <div
+      class="viewall-button"
+      *ngIf="!showAllPlans"
+      (click)="viewall()">
+      View All
+    </div>
+
+      <div
+        class="close-button"
+        *ngIf="showAllPlans"
+        (click)="closeAllPlans()">
+        <mat-icon>close</mat-icon>
+      </div>
+
+  </div>
+
+  <div *ngIf="!showAllPlans" class="today-ideas">
+
+    <app-todays-idea-child
+      *ngFor="let idea of todaysIdeas"
+      [ideaData]="idea">
+    </app-todays-idea-child>
+
+  </div>
+
+  <div *ngIf="showAllPlans">
+
+    <app-view-all-child
+      *ngFor="let idea of allIdeas"
+      [ideaData]="idea">
+    </app-view-all-child>
+
+  </div>
+
+</div>

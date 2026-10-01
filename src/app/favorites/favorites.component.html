@@ -1,0 +1,25 @@
+<div class="flex-col my-ideas">
+
+  <div class="card-header">
+
+    <div class="flex-col my-ideas-header">
+      <label class="card-title">Favorite Ideas</label>
+      <label class="description">
+        Your saved favorite ideas.
+      </label>
+    </div>
+
+  </div>
+
+  <div class="ads-search-box">
+    <mat-icon>search</mat-icon>
+    <label class="search-box">Search ideas</label>
+  </div>
+
+  <app-favorite-child
+    *ngFor="let idea of favoriteIdeas"
+    [ideaData]="idea"
+    (favoriteIdea)="onFavorite($event)">
+  </app-favorite-child>
+
+</div>

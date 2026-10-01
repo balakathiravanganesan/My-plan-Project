@@ -1,0 +1,72 @@
+<div class="all-section">
+<div class="flex-row section">
+  <div class="flex-col logo">
+    <img
+      src="images/login-image.png"
+      alt="ATHIA Logo"
+      class="idea-logo"
+    />
+  </div>
+
+
+  <div class="login-border"></div>
+
+  <div class="flex-col card-no-action">
+    <img
+      src="images/login-ideabox-image.png"
+      alt="idea Logo"
+      class="idea-box-image"
+    />
+    <!-- <div>
+        <label class="sub-headers">Save Ideas. Plan Better. Do More.</label>
+    </div> -->
+   <form
+        [formGroup]="loginForm"
+        class="login-form"
+        (ngSubmit)="login()"
+      >
+      <div class="input-container form-field-large"> 
+        <input class="floating-input" placeholder=" "
+         formControlName="Email" /> 
+        <label class="floating-label">E-mail</label> 
+      </div>
+
+      <div class="input-container form-field-large">
+
+        <input
+        [type]="hidePassword ? 'password' : 'text'"
+        class="floating-input"
+        placeholder=" "
+        formControlName="password"
+      />
+
+        <label class="floating-label">Password</label>
+
+        <mat-icon class="password-icon" (click)="hidePassword = !hidePassword">{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+
+    </div>
+      <a href="#" class="forgot-password">Forgot Password?</a>
+
+
+      <div class="flex-col">
+      <button
+        mat-flat-button
+        class="login-button"
+        type="submit">
+
+        <span class="login-text">
+          Log in
+        </span>
+
+      </button>
+      </div>
+    </form>
+    <div class="or-divider">
+      <span> or </span>
+    </div>
+    <div class="flex-row center-align-content">
+      <span>Don't have an account? <a routerLink="/register">Create Account</a></span>
+    </div>
+  </div>
+</div>
+</div>

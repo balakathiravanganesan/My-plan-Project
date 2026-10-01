@@ -1,0 +1,191 @@
+.card-no-action {
+  margin-top: 35px;
+  min-width: 290px;
+  position: relative;
+//   border: 1px solid gainsboro;
+  box-shadow: none;
+  max-width: 750px;
+  height: 100vh;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-title {
+  white-space: nowrap;
+  margin-bottom: 12px;
+}
+
+// .date-time{
+//     margin-top: 12px;
+// }
+
+.card-title{
+    font-family: var(--font-fmedium) !important;
+    font-size: var(--font-size-xxxxlarge) !important;
+    color: #000 !important;
+    margin-bottom: 24px;
+}
+
+.input-container {
+  position: relative;
+}
+
+.select-container {
+  position: relative;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #666;
+
+  pointer-events: none;
+}
+
+.desktop-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+
+  width: 100%;
+
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 12px;
+
+  padding: 4px 0;
+  z-index: 1000;
+
+  max-height: 220px;
+  overflow-y: auto;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+  box-sizing: border-box;
+}
+
+.dropdown-option {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.dropdown-option:hover {
+  background: #f4f4f4;
+  border-radius: 12px;
+}
+.priority{
+    padding: 5px;
+}
+
+.priority-options {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin: 10px 0px 0px -5px;
+}
+
+.priority-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  cursor: pointer;
+
+  font-family: var(--font-regular);
+  font-size: var(--font-size-small);
+  color: #000;
+}
+
+.priority-icon {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #fff;
+}
+
+.priority-icon mat-icon {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.priority-icon.low mat-icon {
+  color: #16b364;
+}
+
+.priority-icon.medium mat-icon {
+  color: #f5a623;
+}
+
+.priority-icon.high mat-icon {
+  color: #f04438;
+}
+
+input[type="time"].floating-input {
+  padding: 10px 12px;
+  height: 40px;
+  box-sizing: border-box;
+
+  border: 1px solid #dee2e6;
+  border-radius: 12px;
+
+  font-family: var(--font-regular);
+  font-size: var(--font-size-small);
+
+  outline: none;
+  background: #fff;
+
+  &:focus {
+    border-color: var(--color-primary);
+  }
+
+  &::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
+
+.priority-value{
+    position: relative;
+    bottom: 6px;
+}
+
+.first-record{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.save-button{
+    color: white;
+}
+
+
+
+.reminder-header{
+  padding: 0px 0 0 0;
+  margin: -1px 10px 20px 0px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.reminder-title{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

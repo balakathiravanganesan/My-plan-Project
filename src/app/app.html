@@ -1,0 +1,15 @@
+<div class="flex-col app-container">
+
+  <app-page-header *ngIf="showHeader"></app-page-header>
+
+  <div class="app-layout">
+
+    <app-menu *ngIf="showMenu"></app-menu>
+
+    <main class="page-content">
+      <router-outlet></router-outlet>
+    </main>
+
+  </div>
+
+</div>

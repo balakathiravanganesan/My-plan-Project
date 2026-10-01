@@ -1,0 +1,135 @@
+.content-padding {
+  padding: 0px;
+}
+
+.menu-section {
+width: 249px;
+    background-color: rgb(12, 29, 53);
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 41px;
+}
+
+.menu-content {
+  width: calc(100% - 210px);
+  background-color: #000000;
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+.menu-row {
+  padding-right: 15px;
+  align-items: center;
+}
+
+.link-label {
+  padding-left: 5px;
+}
+
+.side-menu-link {
+  font-family: var(--font-medium) !important;
+  font-size: var(--font-size-large) !important;
+  color: white !important;
+  padding: 5px 5px 5px 10px;
+  text-decoration: solid;
+  cursor: pointer;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5px 0px;
+  display: flex;
+  gap: 4px;
+}
+
+
+
+.menu-icon {
+  font-size: var(--font-size-medium) !important;
+}
+
+.user-info {
+  border-bottom: 1px solid #d7d8da;
+  background-color: #00549c;
+  padding-top: 20px;
+}
+
+.user-section {
+  align-items: center;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  color: #ffffff;
+  font-family: var(--font-medium);
+  font-size: var(--font-size-small);
+}
+
+.greeting {
+  padding-bottom: 10px;
+  padding-left: 20px;
+  color: #ffffff;
+  font-family: var(--font-regular);
+  font-size: var(--font-size-small);
+}
+
+.closebtn {
+  display: none;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  padding: 15px 15px 15px 20px;
+  text-decoration: none;
+  font-family: var(--font-regular);
+  font-size: var(--font-size-small);
+  color: #000000;
+  cursor: pointer;
+}
+
+.selected-menu {
+  background-color: #03a9f473;
+  font-family: "Roboto-Medium";
+  font-size: 14px;
+  border-top-left-radius: 30px;
+  padding: 15px 15px 15px 20px;
+  border-bottom-left-radius: 30px;
+}
+
+
+@media only screen and (max-width: 450px) {
+
+  .menu-section {
+    width: 97vw !important;     
+    height: 100%;
+  }
+
+  .side-menu {
+    width: 100vw;
+  }
+}
+.hide{
+  display: none;
+}
+
+.menu-icon{
+  font-size: 20px !important;
+}
+
+.logout-button {
+  margin-top: auto !important;
+  margin-bottom: 20px !important;
+}
+
+.idea-logo{
+    width: 245px;
+    position: relative;
+    font-language-override: 13px;
+    right: 20px;
+}

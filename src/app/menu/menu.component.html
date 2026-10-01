@@ -1,0 +1,49 @@
+<div class="flex-col menu-section" [class.hide]="!showMenu">
+
+  <button
+    mat-button
+    class="side-menu-link flex-row"
+    routerLink="/home"
+    routerLinkActive="selected-menu"
+    [routerLinkActiveOptions]="{ exact: true }">
+
+    <mat-icon class="menu-icon">home</mat-icon>
+    Home
+
+  </button>
+
+  <button
+    mat-button
+    class="side-menu-link flex-row"
+    routerLink="/ideas"
+    routerLinkActive="selected-menu"
+    [routerLinkActiveOptions]="{ exact: true }">
+
+    <mat-icon class="menu-icon">lightbulb</mat-icon>
+    Ideas
+
+  </button>
+
+  <button
+    mat-button
+    class="side-menu-link flex-row"
+    routerLink="/favorites"
+    routerLinkActive="selected-menu"
+    [routerLinkActiveOptions]="{ exact: true }">
+
+    <mat-icon class="menu-icon">favorite</mat-icon>
+    Favorites
+
+  </button>
+
+  <button
+    mat-button
+    class="side-menu-link flex-row logout-button"
+    (click)="logout()">
+
+    <mat-icon class="menu-icon">logout</mat-icon>
+    Logout
+
+  </button>
+
+</div>

@@ -1,0 +1,111 @@
+<div class="card-no-action">
+
+  <div class="flex-row jobs-content">
+
+    <div class="profile-circle">
+      <mat-icon class="wavinghand-icon">
+        lightbulb_outline
+      </mat-icon>
+    </div>
+
+    <div class="flex-col jobs-header">
+
+      <div class="flex-row jobs-subheader">
+
+        <div class="card-title">
+          {{ ideaData.title }}
+        </div>
+
+      </div>
+
+      <div class="flex-row company-row">
+
+        <label class="description">
+          {{ ideaData.description }}
+        </label>
+
+      </div>
+
+      <div class="flex-row employe-type">
+
+        <label class="employe-typebox">
+          {{ ideaData.category }}
+        </label>
+
+        <label
+          class="employe-typebox"
+          [ngClass]="ideaData.priority?.toLowerCase()">
+
+          {{ ideaData.priority }}
+
+        </label>
+
+        <label class="employe-typebox">
+          {{ ideaData.status }}
+        </label>
+
+      </div>
+
+      <div class="date-time">
+
+        <div>
+          <mat-icon>calendar_today</mat-icon>
+
+          <span>
+            {{ ideaData.planDateTime | date:'dd MMM yyyy' }}
+          </span>
+        </div>
+        
+        <span>/</span>
+
+        <div>
+
+          <mat-icon>access_time</mat-icon>
+
+          <span>
+            {{ ideaData.planDateTime | date:'hh:mm a' }}
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="flex-row three-button">
+
+    <div
+      class="Ai-button"
+      (click)="onEdit()">
+
+      <mat-icon>
+        edit
+      </mat-icon>
+
+    </div>
+
+    <div
+      class="delete-button"
+      (click)="onDelete()">
+
+      <mat-icon>
+        delete_outline
+      </mat-icon>
+
+    </div>
+
+    <div
+      class="delete-button"
+      (click)="onFavorite()">
+
+      <mat-icon>
+        {{ ideaData.isFavorite ? 'favorite' : 'favorite_border' }}
+      </mat-icon>
+
+    </div>
+
+  </div>
+
+</div>

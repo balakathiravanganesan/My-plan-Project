@@ -1,0 +1,261 @@
+<div class="card-no-action">
+
+  <div class="flex-row">
+    <div class="card-title">Add New Idea</div>
+  </div>
+
+  <div class="flex-col first-record">
+
+    <div class="flex-col col-space">
+      <div class="input-container form-field-xxxlarge">
+        <input
+          class="floating-input"
+          placeholder=" "
+          [(ngModel)]="title">
+        <label class="floating-label">
+          Idea Title
+        </label>
+      </div>
+    </div>
+
+
+<div class="input-container full-width">
+
+  <textarea 
+  class="floating-input" 
+  placeholder=" "
+  [(ngModel)]="description">
+
+  </textarea>
+
+  <label class="floating-label">
+    Description
+  </label>
+
+</div>
+
+
+<div class="flex-row">
+    <div class="flex-col col-space">
+    <div class="input-container form-field-medium">
+
+    <input
+      class="floating-input"
+      placeholder=" "
+      [(ngModel)]="selectedCategory"
+      readonly
+      (click)="openCategory()"
+    >
+
+    <label class="floating-label">
+      Category
+    </label>
+
+    <span class="select-arrow"></span>
+
+     <div
+    class="desktop-dropdown"
+    *ngIf="showCategoryDropdown"
+  >
+
+    <div
+      class="dropdown-option"
+      *ngFor="let option of categoryOptions"
+      (mousedown)="selectCategory(option)"
+    >
+      {{ option }}
+    </div>
+
+  </div>
+</div>
+    
+  </div>
+      <div class="flex-col col-space">
+      <div class="input-container form-field-large">
+        <input
+          class="floating-input"
+          placeholder=" "
+          [(ngModel)]="customcategory">
+        <label class="floating-label">
+          Enter Category
+        </label>
+      </div>
+    </div>
+</div>
+
+    <div class="flex-row">
+    <div class="flex-col col-space date-time">
+      <div class="input-container form-field-medium">
+        <input
+          type="date"
+          class="floating-input"
+           [(ngModel)]="selectedDate">
+        <label class="floating-label">
+          Plan Date
+        </label>
+      </div>
+    </div>
+
+    <div class="flex-col col-space">
+    <div class="input-container form-field-medium">
+
+        <input
+        type="time"
+        class="floating-input"
+        [(ngModel)]="selectedTime">
+
+        <label class="floating-label">
+        Event Time
+        </label>
+
+    </div>
+    </div>
+    </div>
+    
+    <div class="flex-col col-space">
+    <div class="input-container form-field-medium">
+
+    <input
+      class="floating-input"
+      placeholder=" "
+      [(ngModel)]="selectedStatus"
+      readonly
+      (click)="openStatus()"
+    >
+
+    <label class="floating-label">
+      Status
+    </label>
+
+    <span class="select-arrow"></span>
+
+     <div
+    class="desktop-dropdown"
+    *ngIf="showStatus"
+  >
+
+    <div
+      class="dropdown-option"
+      *ngFor="let status of statusOptions"
+      (mousedown)="SelectedStatus(status)"
+    >
+      {{ status }}
+    </div>
+
+  </div>
+</div>
+
+
+<div class="reminder-section">
+
+  <div class="reminder-header">
+
+    <div class="reminder-title">
+      <mat-icon>notifications_none</mat-icon>
+      <span>Set Reminder</span>
+    </div>
+
+    <label class="reminder-toggle">
+      <input
+        type="checkbox"
+        [(ngModel)]="reminderEnabled">
+      <span class="toggle-slider"></span>
+    </label>
+
+  </div>
+
+  <div
+    class="flex-row"
+    *ngIf="reminderEnabled">
+
+    <div class="flex-col col-space">
+
+      <div class="input-container form-field-medium">
+
+        <input
+          type="date"
+          class="floating-input"
+          [(ngModel)]="reminderDate">
+
+        <label class="floating-label">
+          Reminder Date
+        </label>
+
+      </div>
+
+    </div>
+
+    <div class="flex-col col-space">
+
+      <div class="input-container form-field-medium">
+
+        <input
+          type="time"
+          class="floating-input"
+          [(ngModel)]="reminderTime">
+
+        <label class="floating-label">
+          Reminder Time
+        </label>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+      <div class="flex-col priority">
+      <div class="priority-value">
+   
+        <label>
+          Priority
+        </label>
+
+          <div class="priority-options">
+
+        <div
+            class="priority-option"
+            *ngFor="let option of priorityOptions"
+            (click)="selectPriority(option.value)"
+            >
+
+            <div
+                class="priority-icon"
+                [ngClass]="option.value.toLowerCase()"
+            >
+                <mat-icon>
+                {{ selectedPriority === option.value ? 'radio_button_checked' : 'radio_button_unchecked' }}
+                </mat-icon>
+            </div>
+
+            <span>{{ option.value }}</span>
+      </div>
+    </div>
+
+
+</div>
+</div>
+
+    </div>
+
+  </div>
+
+  <div class="actions">
+
+    <button
+      matButton="filled"
+      (click)="savePersonalInfo()"
+      class="save-button">
+      Save
+    </button>
+
+    <button
+      mat-stroked-button
+      (click)="cancelPersonalInfo()">
+      Cancel
+    </button>
+
+  </div>
+</div>
+
